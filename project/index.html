@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Техномарт</title>
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/svg4everybody.js"></script>
+  <script>svg4everybody();</script>
+  <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+  <script src="js/map-pin.js" async></script>
 </head>
 <body>
   <header class="main-header">
@@ -20,8 +23,7 @@
             <svg class="user-links__icon"><use xlink:href="img/sprite.svg#bookmark-icon"></use></svg>Закладки: 0
           </a>
           <a class="user-links__item" href="#">
-            <svg class="user-links__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
-            Корзина: 0
+            <svg class="user-links__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>Корзина: 0
           </a>
           <a class="user-links__item user-links__item--order" href="#">Оформить заказ</a>
         </div>
@@ -37,11 +39,15 @@
         <p class="contacts__address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
       <nav class="user-nav column-middle__user-nav">
-        <a class="user-nav__link user-nav__link--login" href="#">
-          <svg class="icon user-nav__icon"><use xlink:href="img/sprite.svg#login-icon"></use></svg>
-          Войти
-        </a>
-        <a class="user-nav__link user-nav__link--registrations" href="#">Регистрация</a>
+        <ul class="user-nav__list">
+          <li class="user-nav__item user-nav__item--login">
+            <a class="user-nav__link user-nav__link--login" href="#">Войти</a>
+            <svg class="icon user-nav__icon"><use xlink:href="img/sprite.svg#login-icon"></use></svg>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link user-nav__link--registrations" href="#">Регистрация</a>
+          </li>
+        </ul>
       </nav>
     </div>
     <nav class="site-nav">
@@ -115,56 +121,60 @@
         <h2 class="pop-title">Популярные товары:</h2>
         <a class="bnt popular__link" href="#">Все популярные товары</a>
       </div>
-      <ul class="popular-goods__list">
-        <li class="popular-goods__item">
-          <img class="popular-goods__img" src="img/product1.jpg" width="218" height="160">
-          <h3 class="popular-goods__title">Перфоратор BOSCH BFG 9000</h3>
-          <p class="popular-goods__old-price">32500 Р.</p>
-          <p class="popular-goods__price">25500 Р.</p>
-
-          <div class="popular-goods__hover">
-            <a class="popular-goods__link popular-goods__link--buy" href="#">Купить
-              <svg class="icon popular-goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
+      <ul class="goods__list goods__list--popular">
+        <li class="goods__item goods__item--popular">
+          <a class="goods__wrapper-img" href="#">
+            <img class="goods__img" src="img/product1.jpg" width="218" height="160" alt="карточка популярного товара">
+          </a>
+          <h3 class="goods__title">Перфоратор BOSCH BFG 9000</h3>
+          <p class="goods__old-price">32500 Р.</p>
+          <p class="goods__price">25500 Р.</p>
+          <div class="goods__hover">
+            <a class="goods__link goods__link--buy" href="#">Купить
+              <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
             </a>
-            <a class="popular-goods__link popular-goods__link--mark" href="#">В закладки</a>
+            <a class="goods__link goods__link--mark" href="#">В закладки</a>
           </div>
         </li>
-        <li class="popular-goods__item">
-          <img class="popular-goods__img" src="img/product2.jpg" width="218" height="160">
-          <h3 class="popular-goods__title">Перфоратор BOSCH BFG 3000</h3>
-          <p class="popular-goods__old-price">22500 Р.</p>
-          <p class="popular-goods__price">15500 Р.</p>
-
-          <div class="popular-goods__hover">
-            <a class="popular-goods__link popular-goods__link--buy" href="#">Купить
-              <svg class="icon popular-goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
+        <li class="goods__item goods__item--popular">
+          <a class="goods__wrapper-img" href="#">
+            <img class="goods__img" src="img/product2.jpg" width="218" height="160" alt="карточка популярного товара">
+          </a>
+          <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
+          <p class="goods__old-price">22500 Р.</p>
+          <p class="goods__price">15500 Р.</p>
+          <div class="goods__hover">
+            <a class="goods__link goods__link--buy" href="#">Купить
+              <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
             </a>
-            <a class="popular-goods__link popular-goods__link--mark" href="#">В закладки</a>
+            <a class="goods__link goods__link--mark" href="#">В закладки</a>
           </div>
         </li>
-        <li class="popular-goods__item">
-          <img class="popular-goods__img" src="img/product3.jpg" width="218" height="160">
-          <h3 class="popular-goods__title">Перфоратор BOSCH BFG 6000</h3>
-          <p class="popular-goods__old-price">30500 Р.</p>
-          <p class="popular-goods__price">25500 Р.</p>
-
-          <div class="popular-goods__hover">
-            <a class="popular-goods__link popular-goods__link--buy" href="#">Купить
-              <svg class="icon popular-goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
+        <li class="goods__item goods__item--popular">
+          <a class="goods__wrapper-img" href="#">
+            <img class="goods__img" src="img/product3.jpg" width="218" height="160" alt="карточка популярного товара">
+          </a>
+          <h3 class="goods__title">Перфоратор BOSCH BFG 6000</h3>
+          <p class="goods__old-price">30500 Р.</p>
+          <p class="goods__price">25500 Р.</p>
+          <div class="goods__hover">
+            <a class="goods__link goods__link--buy" href="#">Купить
+              <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
             </a>
-            <a class="popular-goods__link popular-goods__link--mark" href="#">В закладки</a>
+            <a class="goods__link goods__link--mark" href="#">В закладки</a>
           </div>
         </li>
-        <li class="popular-goods__item popular-goods__item--new">
-          <img class="popular-goods__img" src="img/product4.jpg" width="218" height="160">
-          <h3 class="popular-goods__title">Перфоратор BOSCH BFG 2000</h3>
-          <p class="popular-goods__price">12500 Р.</p>
-
-          <div class="popular-goods__hover">
-            <a class="popular-goods__link popular-goods__link--buy" href="#">Купить
-              <svg class="icon popular-goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
+        <li class="goods__item goods__item--new goods__item--popular">
+          <a class="goods__wrapper-img" href="#">
+            <img class="goods__img" src="img/product4.jpg" width="218" height="160" alt="карточка популярного товара">
+          </a>
+          <h3 class="goods__title">Перфоратор BOSCH BFG 2000</h3>
+          <p class="goods__price">12500 Р.</p>
+          <div class="goods__hover">
+            <a class="goods__link goods__link--buy" href="#">Купить
+              <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
             </a>
-            <a class="popular-goods__link popular-goods__link--mark" href="#">В закладки</a>
+            <a class="goods__link goods__link--mark" href="#">В закладки</a>
           </div>
         </li>
       </ul>
@@ -176,44 +186,28 @@
       </div>
       <ul class="popular-brands__list">
         <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#">
-            <img src="img/bosch.jpg" width="134" height="43" alt="BOSCH">
-          </a>
+          <a class="popular-brands__link" href="#"><img src="img/bosch.jpg" width="134" height="43" alt="BOSCH"></a>
         </li>
         <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#">
-            <img src="img/Makita.jpg" width="123" height="40" alt="Makita">
-          </a>
+          <a class="popular-brands__link" href="#"><img src="img/Makita.jpg" width="123" height="40" alt="Makita"></a>
         </li>
         <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#">
-            <img src="img/dewalt.jpg" width="157" height="59" alt="Dewalt">
-          </a>
+          <a class="popular-brands__link" href="#"><img src="img/dewalt.jpg" width="157" height="59" alt="Dewalt"></a>
         </li>
         <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#">
-            <img src="img/interskol.jpg" width="181" height="26" alt="Интерскол">
-          </a>
+          <a class="popular-brands__link" href="#"><img src="img/interskol.jpg" width="181" height="26" alt="Интерскол"></a>
         </li>
         <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#">
-            <img src="img/Hitachi.jpg" width="169" height="31" alt="Hitachi">
-          </a>
+          <a class="popular-brands__link" href="#"><img src="img/Hitachi.jpg" width="169" height="31" alt="Hitachi"></a>
         </li>
         <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#">
-            <img src="img/LG.jpg" width="121" height="73" alt="LG">
-          </a>
+          <a class="popular-brands__link" href="#"><img src="img/LG.jpg" width="121" height="73" alt="LG"></a>
         </li>
         <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#">
-            <img src="img/AEG.jpg" width="144" height="76" alt="AEG">
-          </a>
+          <a class="popular-brands__link" href="#"><img src="img/AEG.jpg" width="144" height="76" alt="AEG"></a>
         </li>
         <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#">
-            <img src="img/Metabo.jpg" width="162" height="61" alt="Metabo">
-          </a>
+          <a class="popular-brands__link" href="#"><img src="img/Metabo.jpg" width="162" height="61" alt="Metabo"></a>
         </li>
       </ul>
     </section>
@@ -262,8 +256,8 @@
       <div class="contacts-info">
         <p class="info-title contacts-info__title">Контакты</p>
         <p class="info-text contacts-info__text">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-        <div class="map" style="margin-top: 30px;">
-          <a href="#"><img src="img/map.jpg" width="300" height="158"></a>
+        <div class="map">
+          <a class="map__link" href="#"><img src="img/map.jpg" width="300" height="158" alt="карта"></a>
         </div>
         <a class="bnt contacts-info__link" href="#">Заблудились? Напишите нам!</a>
       </div>
@@ -308,26 +302,48 @@
         </div>
         <div class="copyright">
           <p class="copyright__email copyright__link">Обратная связь:<br><a href="mailto:htmlacademy.ru">mail@htmlacademy.ru</a></p>
-          <p class="copyright__site copyright__link">Разработано –<br><a href="htmlacademy.ru">htmlacademy.ru</a></p>
+          <p class="copyright__site copyright__link">Разработано –<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
       </div>
     </div>
   </footer>
   <section class="modal modal-feedback">
     <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
-      <label class="form-feedback__label" for="name">Ваше имя:</label>
-      <input class="form-feedback__input" type="text" name="name" id="name" placeholder="Имя Фамилия">
-      <label class="form-feedback__label" for="email">Ваш e-mail:</label>
-      <input class="form-feedback__input" type="text" name="email" id="email" placeholder="email@example.com">
-      <label class="form-feedback__label" for="letter">Текст письма:</label>
-      <textarea class="form-feedback__textarea" id="letter">В свободной форме</textarea>
-      <button class="form-fedback__button">Отправить</button>
+      <div class="form-feedback__inner">
+        <label class="form-feedback__label">Ваше имя:<br>
+          <input class="form-feedback__input" type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        <label class="form-feedback__label">Ваш e-mail:<br>
+          <input class="form-feedback__input" type="text" name="email" placeholder="email@example.com">
+        </label>
+        <label class="form-feedback__label form-feedback__label--textarea">Текст письма:
+          <textarea class="form-feedback__textarea" placeholder="В свободной форме"></textarea>
+        </label>
+      </div>
+      <button class="bnt form-fedback__button">Отправить</button>
     </form>
-    <button class="modal-close" type="button"><span>Закрыть модальное</span></button>
+    <button class="modal-close modal-close--feedback" type="button">Закрыть модальное
+      <svg class="modal-close__icon"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
+    </button>
   </section>
-  <section class="modal modal-map">
-    <iframe></iframe>
-    <button class="modal-close modal-close--map" type="button">Закрыть модальное окно карты</button>
+  <section id="map"  class="modal modal-map">
+    <button class="modal-close modal-close--map" type="button">Закрыть модальное окно карты
+      <svg class="modal-close__icon"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
+    </button>
   </section>
+  <section class="modal modal-basket">
+    <div class="modal-basket__wrapper-icon">
+      <svg class="modal-basket__icon" viewBox="0 0 27 23"><use xlink:href="img/sprite.svg#check"></use></svg>
+    </div>
+    <p class="modal-basket__title">Товар добавлен в корзину!</p>
+    <a class="bnt modal-basket__link modal-basket__link--buy" href="#">Оформить заказ</a>
+    <a class="modal-basket__link modal-basket__link--next-buy" href="#">Продожить покупки</a>
+    <button class="modal-close modal-close--basket" type="button">Закрыть модальное окно
+      <svg class="modal-close__icon"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
+    </button>
+  </section>
+  <script src="js/toggles-list.js"></script>
+  <script src="js/popup-order.js"></script>
+  <script src="js/map-popup.js"></script>
 </body>
 </html>
