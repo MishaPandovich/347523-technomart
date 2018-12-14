@@ -64,7 +64,7 @@
       </nav>
     </header>
     <main class="main">
-      <div class="main__column-center">
+      <div class="column-center main__column-center">
         <div class="breadcrumbs">
           <svg class="breadcrumbs__icon"><use xlink:href="img/sprite.svg#icon-home"></use></svg>
           <a class="breadcrumbs__link" href="#">Каталог</a>
@@ -90,37 +90,36 @@
                   <input class="price-controls__input" type="text" name="max-price" value="30000">
                 </div>
               </fieldset>
-              <!--поменять название-->
-              <fieldset class="price-brands">
+              <fieldset class="filter-brands">
                 <legend>Производители:</legend>
-                <input class="price-brands__input" type="checkbox" name="bosch" id="bosch" checked>
+                <input class="filter-brands__input" type="checkbox" name="bosch" id="bosch" checked>
 
-                <label class="label price-brands__label" for="bosch">Bosch
-                  <svg class="price-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
+                <label class="label filter-brands__label" for="bosch">Bosch
+                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
                 </label>
-                <input class="price-brands__input" type="checkbox" name="interskol" id="interskol">
-                <label class="label price-brands__label" for="interskol">Интерскол
-                  <svg class="price-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
+                <input class="filter-brands__input" type="checkbox" name="interskol" id="interskol">
+                <label class="label filter-brands__label" for="interskol">Интерскол
+                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
                 </label>
-                <input class="price-brands__input" type="checkbox" name="makita" id="makita" checked>
-                <label class="label price-brands__label" for="makita">Makita
-                  <svg class="price-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
+                <input class="filter-brands__input" type="checkbox" name="makita" id="makita" checked>
+                <label class="label filter-brands__label" for="makita">Makita
+                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
                 </label>
-                <input class="price-brands__input" type="checkbox" name="dewalt" id="dewalt">
-                <label class="label price-brands__label" for="dewalt">Dewalt
-                  <svg class="price-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
+                <input class="filter-brands__input" type="checkbox" name="dewalt" id="dewalt">
+                <label class="label filter-brands__label" for="dewalt">Dewalt
+                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
                 </label>
-                <input class="price-brands__input" type="checkbox" name="hitachi" id="hitachi">
-                <label class="label price-brands__label" for="hitachi">Hitachi
-                  <svg class="price-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
+                <input class="filter-brands__input" type="checkbox" name="hitachi" id="hitachi">
+                <label class="label filter-brands__label" for="hitachi">Hitachi
+                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
                 </label>
               </fieldset>
-              <fieldset class="power-filter">
+              <fieldset class="filter-power">
                 <legend>Питание:</legend>
-                <input class="power-filter__input" type="radio" name="power" id="accumulator" checked>
-                <label class="label power-filter__label" for="accumulator">Аккумуляторные</label>
-                <input class="power-filter__input" type="radio" name="power" id="mains-power">
-                <label class="label power-filter__label" for="mains-power">Сетевые</label>
+                <input class="filter-power__input" type="radio" name="power" id="accumulator" checked>
+                <label class="label filter-power__label" for="accumulator">Аккумуляторные</label>
+                <input class="filter-power__input" type="radio" name="power" id="mains-power">
+                <label class="label filter-power__label" for="mains-power">Сетевые</label>
               </fieldset>
               <button class="filter-form__button" type="submit">Показать</button>
             </form>
@@ -269,7 +268,7 @@
         </div>
       </div>
       <section class="info-goods">
-        <div class="info-goods__inner">
+        <div class="info-goods__inner column-center">
           <h2 class="info-goods__title">Пара слов о перфораторах</h2>
           <p class="info-goods__text">Перфоратор – универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойны молоток и ударная дрель.</p>
         </div>
@@ -330,6 +329,6 @@
       <svg class="modal-close__icon"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
     </button>
     </section>
-    <script src="js/popup-order.js"></script>
+    <script type="text/javascript" src="js/optimaze/toggle-popup-order.js"></script>
   </body>
 </html>

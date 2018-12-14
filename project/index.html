@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <title>Техномарт</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="js/svg4everybody.js"></script>
+  <!--полифил для svg-->
+  <script src="js/optimaze/svg4everybody.js"></script>
   <script>svg4everybody();</script>
   <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-  <script src="js/map-pin.js" async></script>
 </head>
 <body>
   <header class="main-header">
@@ -62,154 +62,160 @@
   </header>
   <main class="main">
     <section class="promo">
-      <div class="promo__block promo__block--new promo__block--theme-material">
-        <p class="promo__title">Материалы</p>
-        <a class="promo__link" href="#">на любой вкус</a>
-        <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-1-icon"></use></svg>
-      </div>
-      <div class="promo__block promo__block--new promo__block--theme-tool">
-        <p class="promo__title">Инструмент</p>
-        <a class="promo__link" href="#">на все случаи</a>
-        <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-2-icon"></use></svg>
-      </div>
-      <div class="promo__block promo__block--new promo__block--theme-technic">
-        <p class="promo__title">Техника</p>
-        <a class="promo__link" href="#">для стройки</a>
-        <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-3-icon"></use></svg>
-      </div>
-      <div class="promo__block promo__block--new promo__block--theme-discount">
-        <p class="promo__title">Скидки 50%</p>
-        <a class="promo__link" href="#">на 350 товаров</a>
-        <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-4-icon"></use></svg>
-      </div>
-      <div class="promo__block promo__block--new promo__block--theme-delivery">
-        <p class="promo__title">Доставка</p>
-        <a class="promo__link" href="#">бесплатно</a>
-        <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-5-icon"></use></svg>
-      </div>
-      <section class="slider promo__slider">
-        <figure class="slider__slide">
-          <img class="slider__img" src="img/slide1.jpg" width="620" height="265" alt="слайд: Перфораторы - настоящие мужские игрушки">
-          <div class="slider__content">
-            <p class="slider__title">Перфораторы</p>
-            <p class="slider__text">Настоящие мужские игрушки</p>
-            <a class="bnt slider__link" href="catalog.html">Открыть каталог</a>
-          </div>
-        </figure>
-        <figure class="slider__slide slider__slide--active">
-          <img class="slider__img" src="img/slide2.jpg" width="620" height="265" alt="слайд: Перфораторы - настоящие мужские игрушки">
-          <div class="slider__content">
-            <p class="slider__title">Дрели</p>
-            <p class="slider__text">Соседям на радость!</p>
-            <a class="bnt slider__link" href="catalog.html">Открыть каталог</a>
-          </div>
-        </figure>
-        <div class="slider__toggles">
-          <span class="slider__toggle">1</span>
-          <span class="slider__toggle slider__toggle--active">2</span>
+      <div class="column-center promo__column-center">
+        <div class="promo__block promo__block--new promo__block--theme-material">
+          <p class="promo__title">Материалы</p>
+          <a class="promo__link" href="#">на любой вкус</a>
+          <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-1-icon"></use></svg>
         </div>
-        <button class="slider__bnt slider__next">Вперед
-          <svg class="slider__icon"><use xlink:href="img/sprite.svg#button-next"></use></svg>
-        </button>
-        <button class="slider__bnt slider__prev">Назад
-          <svg class="slider__icon"><use xlink:href="img/sprite.svg#button-prev"></use></svg>
-        </button>
-      </section>
+        <div class="promo__block promo__block--new promo__block--theme-tool">
+          <p class="promo__title">Инструмент</p>
+          <a class="promo__link" href="#">на все случаи</a>
+          <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-2-icon"></use></svg>
+        </div>
+        <div class="promo__block promo__block--new promo__block--theme-technic">
+          <p class="promo__title">Техника</p>
+          <a class="promo__link" href="#">для стройки</a>
+          <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-3-icon"></use></svg>
+        </div>
+        <div class="promo__block promo__block--new promo__block--theme-discount">
+          <p class="promo__title">Скидки 50%</p>
+          <a class="promo__link" href="#">на 350 товаров</a>
+          <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-4-icon"></use></svg>
+        </div>
+        <div class="promo__block promo__block--new promo__block--theme-delivery">
+          <p class="promo__title">Доставка</p>
+          <a class="promo__link" href="#">бесплатно</a>
+          <svg class="promo__icon"><use xlink:href="img/sprite.svg#promo-5-icon"></use></svg>
+        </div>
+        <section class="slider promo__slider">
+          <figure class="slider__slide">
+            <img class="slider__img" src="img/slide1.jpg" width="620" height="265" alt="слайд: Перфораторы - настоящие мужские игрушки">
+            <div class="slider__content">
+              <p class="slider__title">Перфораторы</p>
+              <p class="slider__text">Настоящие мужские игрушки</p>
+              <a class="bnt slider__link" href="catalog.html">Открыть каталог</a>
+            </div>
+          </figure>
+          <figure class="slider__slide slider__slide--active">
+            <img class="slider__img" src="img/slide2.jpg" width="620" height="265" alt="слайд: Перфораторы - настоящие мужские игрушки">
+            <div class="slider__content">
+              <p class="slider__title">Дрели</p>
+              <p class="slider__text">Соседям на радость!</p>
+              <a class="bnt slider__link" href="catalog.html">Открыть каталог</a>
+            </div>
+          </figure>
+          <div class="slider__toggles">
+            <span class="slider__toggle">1</span>
+            <span class="slider__toggle slider__toggle--active">2</span>
+          </div>
+          <button class="slider__bnt slider__next">Вперед
+            <svg class="slider__icon"><use xlink:href="img/sprite.svg#button-next"></use></svg>
+          </button>
+          <button class="slider__bnt slider__prev">Назад
+            <svg class="slider__icon"><use xlink:href="img/sprite.svg#button-prev"></use></svg>
+          </button>
+        </section>
+      </div>
     </section>
     <section class="popular-goods">
-      <div class="pop-block">
-        <h2 class="pop-title">Популярные товары:</h2>
-        <a class="bnt popular__link" href="#">Все популярные товары</a>
+      <div class="column-center">
+        <div class="pop-block">
+          <h2 class="pop-title">Популярные товары:</h2>
+          <a class="bnt popular__link" href="#">Все популярные товары</a>
+        </div>
+        <ul class="goods__list goods__list--popular">
+          <li class="goods__item goods__item--popular">
+            <a class="goods__wrapper-img" href="#">
+              <img class="goods__img" src="img/product1.jpg" width="218" height="160" alt="карточка популярного товара">
+            </a>
+            <h3 class="goods__title">Перфоратор BOSCH BFG 9000</h3>
+            <p class="goods__old-price">32500 Р.</p>
+            <p class="goods__price">25500 Р.</p>
+            <div class="goods__hover">
+              <a class="goods__link goods__link--buy" href="#">Купить
+                <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
+              </a>
+              <a class="goods__link goods__link--mark" href="#">В закладки</a>
+            </div>
+          </li>
+          <li class="goods__item goods__item--popular">
+            <a class="goods__wrapper-img" href="#">
+              <img class="goods__img" src="img/product2.jpg" width="218" height="160" alt="карточка популярного товара">
+            </a>
+            <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
+            <p class="goods__old-price">22500 Р.</p>
+            <p class="goods__price">15500 Р.</p>
+            <div class="goods__hover">
+              <a class="goods__link goods__link--buy" href="#">Купить
+                <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
+              </a>
+              <a class="goods__link goods__link--mark" href="#">В закладки</a>
+            </div>
+          </li>
+          <li class="goods__item goods__item--popular">
+            <a class="goods__wrapper-img" href="#">
+              <img class="goods__img" src="img/product3.jpg" width="218" height="160" alt="карточка популярного товара">
+            </a>
+            <h3 class="goods__title">Перфоратор BOSCH BFG 6000</h3>
+            <p class="goods__old-price">30500 Р.</p>
+            <p class="goods__price">25500 Р.</p>
+            <div class="goods__hover">
+              <a class="goods__link goods__link--buy" href="#">Купить
+                <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
+              </a>
+              <a class="goods__link goods__link--mark" href="#">В закладки</a>
+            </div>
+          </li>
+          <li class="goods__item goods__item--new goods__item--popular">
+            <a class="goods__wrapper-img" href="#">
+              <img class="goods__img" src="img/product4.jpg" width="218" height="160" alt="карточка популярного товара">
+            </a>
+            <h3 class="goods__title">Перфоратор BOSCH BFG 2000</h3>
+            <p class="goods__price">12500 Р.</p>
+            <div class="goods__hover">
+              <a class="goods__link goods__link--buy" href="#">Купить
+                <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
+              </a>
+              <a class="goods__link goods__link--mark" href="#">В закладки</a>
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul class="goods__list goods__list--popular">
-        <li class="goods__item goods__item--popular">
-          <a class="goods__wrapper-img" href="#">
-            <img class="goods__img" src="img/product1.jpg" width="218" height="160" alt="карточка популярного товара">
-          </a>
-          <h3 class="goods__title">Перфоратор BOSCH BFG 9000</h3>
-          <p class="goods__old-price">32500 Р.</p>
-          <p class="goods__price">25500 Р.</p>
-          <div class="goods__hover">
-            <a class="goods__link goods__link--buy" href="#">Купить
-              <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
-            </a>
-            <a class="goods__link goods__link--mark" href="#">В закладки</a>
-          </div>
-        </li>
-        <li class="goods__item goods__item--popular">
-          <a class="goods__wrapper-img" href="#">
-            <img class="goods__img" src="img/product2.jpg" width="218" height="160" alt="карточка популярного товара">
-          </a>
-          <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
-          <p class="goods__old-price">22500 Р.</p>
-          <p class="goods__price">15500 Р.</p>
-          <div class="goods__hover">
-            <a class="goods__link goods__link--buy" href="#">Купить
-              <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
-            </a>
-            <a class="goods__link goods__link--mark" href="#">В закладки</a>
-          </div>
-        </li>
-        <li class="goods__item goods__item--popular">
-          <a class="goods__wrapper-img" href="#">
-            <img class="goods__img" src="img/product3.jpg" width="218" height="160" alt="карточка популярного товара">
-          </a>
-          <h3 class="goods__title">Перфоратор BOSCH BFG 6000</h3>
-          <p class="goods__old-price">30500 Р.</p>
-          <p class="goods__price">25500 Р.</p>
-          <div class="goods__hover">
-            <a class="goods__link goods__link--buy" href="#">Купить
-              <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
-            </a>
-            <a class="goods__link goods__link--mark" href="#">В закладки</a>
-          </div>
-        </li>
-        <li class="goods__item goods__item--new goods__item--popular">
-          <a class="goods__wrapper-img" href="#">
-            <img class="goods__img" src="img/product4.jpg" width="218" height="160" alt="карточка популярного товара">
-          </a>
-          <h3 class="goods__title">Перфоратор BOSCH BFG 2000</h3>
-          <p class="goods__price">12500 Р.</p>
-          <div class="goods__hover">
-            <a class="goods__link goods__link--buy" href="#">Купить
-              <svg class="icon goods__icon"><use xlink:href="img/sprite.svg#basket-icon"></use></svg>
-            </a>
-            <a class="goods__link goods__link--mark" href="#">В закладки</a>
-          </div>
-        </li>
-      </ul>
     </section>
     <section class="popular-brands">
-      <div class="pop-block popular-brands__block">
-        <h2 class="pop-title">Популярные производители:</h2>
-        <a class="bnt popular__link popular-brands__link" href="#">Все производители</a>
+      <div class="column-center">
+        <div class="pop-block popular-brands__block">
+          <h2 class="pop-title">Популярные производители:</h2>
+          <a class="bnt popular__link popular-brands__link" href="#">Все производители</a>
+        </div>
+        <ul class="popular-brands__list">
+          <li class="popular-brands__item">
+            <a class="popular-brands__link" href="#"><img src="img/bosch.jpg" width="134" height="43" alt="BOSCH"></a>
+          </li>
+          <li class="popular-brands__item">
+            <a class="popular-brands__link" href="#"><img src="img/Makita.jpg" width="123" height="40" alt="Makita"></a>
+          </li>
+          <li class="popular-brands__item">
+            <a class="popular-brands__link" href="#"><img src="img/dewalt.jpg" width="157" height="59" alt="Dewalt"></a>
+          </li>
+          <li class="popular-brands__item">
+            <a class="popular-brands__link" href="#"><img src="img/interskol.jpg" width="181" height="26" alt="Интерскол"></a>
+          </li>
+          <li class="popular-brands__item">
+            <a class="popular-brands__link" href="#"><img src="img/Hitachi.jpg" width="169" height="31" alt="Hitachi"></a>
+          </li>
+          <li class="popular-brands__item">
+            <a class="popular-brands__link" href="#"><img src="img/LG.jpg" width="121" height="73" alt="LG"></a>
+          </li>
+          <li class="popular-brands__item">
+            <a class="popular-brands__link" href="#"><img src="img/AEG.jpg" width="144" height="76" alt="AEG"></a>
+          </li>
+          <li class="popular-brands__item">
+            <a class="popular-brands__link" href="#"><img src="img/Metabo.jpg" width="162" height="61" alt="Metabo"></a>
+          </li>
+        </ul>
       </div>
-      <ul class="popular-brands__list">
-        <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#"><img src="img/bosch.jpg" width="134" height="43" alt="BOSCH"></a>
-        </li>
-        <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#"><img src="img/Makita.jpg" width="123" height="40" alt="Makita"></a>
-        </li>
-        <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#"><img src="img/dewalt.jpg" width="157" height="59" alt="Dewalt"></a>
-        </li>
-        <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#"><img src="img/interskol.jpg" width="181" height="26" alt="Интерскол"></a>
-        </li>
-        <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#"><img src="img/Hitachi.jpg" width="169" height="31" alt="Hitachi"></a>
-        </li>
-        <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#"><img src="img/LG.jpg" width="121" height="73" alt="LG"></a>
-        </li>
-        <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#"><img src="img/AEG.jpg" width="144" height="76" alt="AEG"></a>
-        </li>
-        <li class="popular-brands__item">
-          <a class="popular-brands__link" href="#"><img src="img/Metabo.jpg" width="162" height="61" alt="Metabo"></a>
-        </li>
-      </ul>
     </section>
     <section class="services">
       <div class="services__wrapper">
@@ -242,24 +248,26 @@
       </div>
     </section>
     <section class="base-info">
-      <div class="company-info">
-        <p class="info-title company-info__title">Компания «Техномарт»</p>
-        <p class="info-text company-info__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-        <p class="info-text company-info__text">Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
-        <ul class="transport-company__list">
-          <li class="transport-company__item">Деловые линии</li>
-          <li class="transport-company__item">Автотрейдинг</li>
-          <li class="transport-company__item">ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="bnt company-info__link" href="#">Подробнее о компании</a>
-      </div>
-      <div class="contacts-info">
-        <p class="info-title contacts-info__title">Контакты</p>
-        <p class="info-text contacts-info__text">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-        <div class="map">
-          <a class="map__link" href="#"><img src="img/map.jpg" width="300" height="158" alt="карта"></a>
+      <div class="column-center base-info__column-center">
+        <div class="company-info">
+          <p class="info-title company-info__title">Компания «Техномарт»</p>
+          <p class="info-text company-info__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+          <p class="info-text company-info__text">Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
+          <ul class="transport-company__list">
+            <li class="transport-company__item">Деловые линии</li>
+            <li class="transport-company__item">Автотрейдинг</li>
+            <li class="transport-company__item">ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="bnt company-info__link" href="#">Подробнее о компании</a>
         </div>
-        <a class="bnt contacts-info__link" href="#">Заблудились? Напишите нам!</a>
+        <div class="contacts-info">
+          <p class="info-title contacts-info__title">Контакты</p>
+          <p class="info-text contacts-info__text">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
+          <div class="map">
+            <a class="map__link" href="#"><img src="img/map.jpg" width="300" height="158" alt="карта"></a>
+          </div>
+          <a class="bnt contacts-info__link" href="#">Заблудились? Напишите нам!</a>
+        </div>
       </div>
     </section>
   </main>
@@ -342,8 +350,9 @@
       <svg class="modal-close__icon"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
     </button>
   </section>
-  <script src="js/toggles-list.js"></script>
-  <script src="js/popup-order.js"></script>
-  <script src="js/map-popup.js"></script>
+  <script type="text/javascript" src="js/optimaze/interactive-map.js"></script>
+  <script type="text/javascript" src="js/optimaze/toggle-popup.js"></script>
+  <script type="text/javascript" src="js/optimaze/toggle-popup-order.js"></script>
+  <script type="text/javascript" src="js/optimaze/toggles-list.js"></script>
 </body>
 </html>
