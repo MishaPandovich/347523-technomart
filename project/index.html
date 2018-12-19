@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Техномарт</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!--полифил для svg-->
-  <script src="js/optimaze/svg4everybody.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/min_style.css">
+  <script src="js/min_polyfill_svg.js"></script>
   <script>svg4everybody();</script>
   <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
 </head>
@@ -94,7 +94,7 @@
             <div class="slider__content">
               <p class="slider__title">Перфораторы</p>
               <p class="slider__text">Настоящие мужские игрушки</p>
-              <a class="bnt slider__link" href="catalog.html">Открыть каталог</a>
+              <a class="btn slider__link" href="catalog.html">Открыть каталог</a>
             </div>
           </figure>
           <figure class="slider__slide slider__slide--active">
@@ -102,17 +102,17 @@
             <div class="slider__content">
               <p class="slider__title">Дрели</p>
               <p class="slider__text">Соседям на радость!</p>
-              <a class="bnt slider__link" href="catalog.html">Открыть каталог</a>
+              <a class="btn slider__link" href="catalog.html">Открыть каталог</a>
             </div>
           </figure>
           <div class="slider__toggles">
             <span class="slider__toggle">1</span>
             <span class="slider__toggle slider__toggle--active">2</span>
           </div>
-          <button class="slider__bnt slider__next">Вперед
+          <button class="slider__btn slider__next">Вперед
             <svg class="slider__icon"><use xlink:href="img/sprite.svg#button-next"></use></svg>
           </button>
-          <button class="slider__bnt slider__prev">Назад
+          <button class="slider__btn slider__prev">Назад
             <svg class="slider__icon"><use xlink:href="img/sprite.svg#button-prev"></use></svg>
           </button>
         </section>
@@ -122,7 +122,7 @@
       <div class="column-center">
         <div class="pop-block">
           <h2 class="pop-title">Популярные товары:</h2>
-          <a class="bnt popular__link" href="#">Все популярные товары</a>
+          <a class="btn popular__link" href="#">Все популярные товары</a>
         </div>
         <ul class="goods__list goods__list--popular">
           <li class="goods__item goods__item--popular">
@@ -187,7 +187,7 @@
       <div class="column-center">
         <div class="pop-block popular-brands__block">
           <h2 class="pop-title">Популярные производители:</h2>
-          <a class="bnt popular__link popular-brands__link" href="#">Все производители</a>
+          <a class="btn popular__link popular-brands__link" href="#">Все производители</a>
         </div>
         <ul class="popular-brands__list">
           <li class="popular-brands__item">
@@ -241,7 +241,7 @@
             <div class="services-popup services-popup--loan">
               <h3 class="services-popup__title">Кредит</h3>
               <p class="services-popup__text">Залезть в долговую яму стало проще!<br> Кредитные консультанты придут к вам на помощь.</p>
-              <a class="bnt services-popup__link" href="#">Отправить заявку</a>
+              <a class="btn services-popup__link" href="#">Отправить заявку</a>
             </div>
           </li>
         </ul>
@@ -258,7 +258,7 @@
             <li class="transport-company__item">Автотрейдинг</li>
             <li class="transport-company__item">ЖелДорЭкспедиция</li>
           </ul>
-          <a class="bnt company-info__link" href="#">Подробнее о компании</a>
+          <a class="btn company-info__link" href="#">Подробнее о компании</a>
         </div>
         <div class="contacts-info">
           <p class="info-title contacts-info__title">Контакты</p>
@@ -266,7 +266,7 @@
           <div class="map">
             <a class="map__link" href="#"><img src="img/map.jpg" width="300" height="158" alt="карта"></a>
           </div>
-          <a class="bnt contacts-info__link" href="#">Заблудились? Напишите нам!</a>
+          <a class="btn contacts-info__link" href="#">Заблудились? Напишите нам!</a>
         </div>
       </div>
     </section>
@@ -276,7 +276,7 @@
       <a class="logo footer__logo" href="#">Техномарт</a>
       <div class="footer__contacts">
         <p class="footer__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <p class="footer__phone">+7 (812) 555-05-55</p>
+        <p class="footer__phone"><a href="tel://+78125550555">+7 (812) 555-05-55</a></p>
       </div>
       <div class="footer-nav">
         <ul class="footer-nav__list footer-nav__list--top">
@@ -328,7 +328,7 @@
           <textarea class="form-feedback__textarea" placeholder="В свободной форме"></textarea>
         </label>
       </div>
-      <button class="bnt form-fedback__button">Отправить</button>
+      <button class="btn form-fedback__button">Отправить</button>
     </form>
     <button class="modal-close modal-close--feedback" type="button">Закрыть модальное
       <svg class="modal-close__icon"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
@@ -344,15 +344,15 @@
       <svg class="modal-basket__icon" viewBox="0 0 27 23"><use xlink:href="img/sprite.svg#check"></use></svg>
     </div>
     <p class="modal-basket__title">Товар добавлен в корзину!</p>
-    <a class="bnt modal-basket__link modal-basket__link--buy" href="#">Оформить заказ</a>
+    <a class="btn modal-basket__link modal-basket__link--buy" href="#">Оформить заказ</a>
     <a class="modal-basket__link modal-basket__link--next-buy" href="#">Продожить покупки</a>
     <button class="modal-close modal-close--basket" type="button">Закрыть модальное окно
       <svg class="modal-close__icon"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
     </button>
   </section>
-  <script type="text/javascript" src="js/optimaze/interactive-map.js"></script>
-  <script type="text/javascript" src="js/optimaze/toggle-popup.js"></script>
-  <script type="text/javascript" src="js/optimaze/toggle-popup-order.js"></script>
-  <script type="text/javascript" src="js/optimaze/toggles-list.js"></script>
+  <script type="text/javascript" src="js/min_popups.js"></script>
+  <script type="text/javascript" src="js/min_popup_order.js"></script>
+  <script type="text/javascript" src="js/min_Yandexmap.js"></script>
+  <script type="text/javascript" src="js/min_toggles_services.js"></script>
 </body>
 </html>

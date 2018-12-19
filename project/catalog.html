@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/svg4everybody.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/min_style.css">
+    <script src="js/min_polyfill_svg.js"></script>
     <script>svg4everybody();</script>
   </head>
   <body>
@@ -93,26 +94,15 @@
               <fieldset class="filter-brands">
                 <legend>Производители:</legend>
                 <input class="filter-brands__input" type="checkbox" name="bosch" id="bosch" checked>
-
-                <label class="label filter-brands__label" for="bosch">Bosch
-                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
-                </label>
+                <label class="label filter-brands__label" for="bosch">Bosch</label>
                 <input class="filter-brands__input" type="checkbox" name="interskol" id="interskol">
-                <label class="label filter-brands__label" for="interskol">Интерскол
-                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
-                </label>
+                <label class="label filter-brands__label" for="interskol">Интерскол</label>
                 <input class="filter-brands__input" type="checkbox" name="makita" id="makita" checked>
-                <label class="label filter-brands__label" for="makita">Makita
-                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
-                </label>
+                <label class="label filter-brands__label" for="makita">Makita</label>
                 <input class="filter-brands__input" type="checkbox" name="dewalt" id="dewalt">
-                <label class="label filter-brands__label" for="dewalt">Dewalt
-                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
-                </label>
+                <label class="label filter-brands__label" for="dewalt">Dewalt</label>
                 <input class="filter-brands__input" type="checkbox" name="hitachi" id="hitachi">
-                <label class="label filter-brands__label" for="hitachi">Hitachi
-                  <svg class="filter-brands__icon"><use xlink:href="img/sprite.svg#check"></use></svg>
-                </label>
+                <label class="label filter-brands__label" for="hitachi">Hitachi</label>
               </fieldset>
               <fieldset class="filter-power">
                 <legend>Питание:</legend>
@@ -279,7 +269,7 @@
         <a class="logo footer__logo" href="#">Техномарт</a>
         <div class="footer__contacts">
           <p class="footer__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p class="footer__phone">+7 (812) 555-05-55</p>
+          <p class="footer__phone"><a href="tel://+78125550555">+7 (812) 555-05-55</a></p>
         </div>
         <div class="footer-nav">
           <ul class="footer-nav__list footer-nav__list--top">
@@ -323,12 +313,12 @@
         <svg class="modal-basket__icon" viewBox="0 0 27 23"><use xlink:href="img/sprite.svg#check"></use></svg>
       </div>
       <p class="modal-basket__title">Товар добавлен в корзину!</p>
-      <a class="bnt modal-basket__link modal-basket__link--buy" href="#">Оформить заказ</a>
+      <a class="btn modal-basket__link modal-basket__link--buy" href="#">Оформить заказ</a>
       <a class="modal-basket__link modal-basket__link--next-buy" href="#">Продожить покупки</a>
       <button class="modal-close modal-close--basket" type="button">Закрыть модальное окно
       <svg class="modal-close__icon"><use xlink:href="img/sprite.svg#close-icon"></use></svg>
     </button>
     </section>
-    <script type="text/javascript" src="js/optimaze/toggle-popup-order.js"></script>
+    <script type="text/javascript" src="js/min_popup_order.js"></script>
   </body>
 </html>
